@@ -8,6 +8,13 @@ def norma(x: list[float]) -> float | None:
     # a norma de um vetor [1, 2, 4] é 4.58257569495584
     # ela consiste em calcular a raiz quadrada da soma dos quadrados dos elementos do vetor
     # se o vetor estiver vazio retorne None
+    if len(x) == 0:
+        return
+    soma = 0
+    for elemento in x:
+        soma += elemento**2
+        raiz = soma**0.5
+    return raiz
 
 
 def soma(x: list[float], y: list[float]) -> list[float] | None:
@@ -16,13 +23,26 @@ def soma(x: list[float], y: list[float]) -> list[float] | None:
     # a soma de dois vetores [1, 2, 4] + [2, 3, 4] é [3, 5, 8]
     # a soma só pode ser realizada se os vetores tem a mesma quantidade de elementos.
     # caso contrário, deve retornar None
+    if len(x) != len(y):
+        return
+    soma = []
+    for i in range(len(x)):
+        soma.append(x[i] + y[i])
+    return soma
+    #como eu sei que x e y possuem a mesma quantidade de elementos,
+    #então posso iterar a lista apenas em x, pois o índice dele corresponde ao índice de x.
+
+
 
 
 def multiplicação_por_escalar(vetor: list[float], escalar: float) -> list[float]:
     """Multiplica um vetor por um escalar"""
     # TODO: implementar
     # a multiplicação de um vetor [1, 2, 4] por um escalar 2 é [2, 4, 8]
-
+    multiplicação = []
+    for i in vetor:
+        multiplicação.append(vetor[i] * escalar)
+    return multiplicação 
 
 def produto_interno(x: list[float], y: list[float]) -> float | None:
     """Calcula o produto interno de dois vetores"""

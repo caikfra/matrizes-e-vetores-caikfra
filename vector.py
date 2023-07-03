@@ -29,20 +29,19 @@ def soma(x: list[float], y: list[float]) -> list[float] | None:
     for i in range(len(x)):
         soma.append(x[i] + y[i])
     return soma
-    #como eu sei que x e y possuem a mesma quantidade de elementos,
-    #então posso iterar a lista apenas em x, pois o índice dele corresponde ao índice de x.
+    # como eu sei que x e y possuem a mesma quantidade de elementos,
+    # então posso iterar a lista apenas em x, pois o índice dele corresponde ao índice de x.
 
 
-
-
-def multiplicação_por_escalar(vetor: list[float], escalar: float) -> list[float]:
+def multiplicacao_por_escalar(vetor: list[float], escalar: float) -> list[float]:
     """Multiplica um vetor por um escalar"""
     # TODO: implementar
     # a multiplicação de um vetor [1, 2, 4] por um escalar 2 é [2, 4, 8]
     multiplicação = []
     for i in vetor:
         multiplicação.append(vetor[i] * escalar)
-    return multiplicação 
+    return multiplicação
+
 
 def produto_interno(x: list[float], y: list[float]) -> float | None:
     """Calcula o produto interno de dois vetores"""
@@ -62,7 +61,7 @@ def produto_vetorial(x: list[float], y: list[float]) -> list[float] | None:
     # caso contrário, deve retornar None
 
 
-def produto_diádico(x: list[float], y: list[float]) -> list[list[float]] | None:
+def produto_diadico(x: list[float], y: list[float]) -> list[list[float]] | None:
     """Calcula o produto diádico de dois vetores"""
     # TODO: implementar
     # o produto diádico de dois vetores [1, 2, 4] e [2, 3, 4] é [[2, 3, 4], [4, 6, 8], [8, 12, 16]]

@@ -9,13 +9,17 @@ def soma(x: list[list[float]], y: list[list[float]]) -> list[list[float]] | None
     # caso contrário, deve retornar None
 
 
-def multiplicação_por_escalar(matriz: list[list[float]], escalar: float) -> list[list[float]]:
+def multiplicacao_por_escalar(
+    matriz: list[list[float]], escalar: float
+) -> list[list[float]]:
     """Multiplica uma matriz por um escalar"""
     # TODO: implementar
     # a multiplicação de uma matriz [[1, 2, 4], [2, 3, 4]] por um escalar 2 é [[2, 4, 8], [4, 6, 8]]
 
 
-def multiplicação(x: list[list[float]], y: list[list[float]]) -> list[list[float]] | None:
+def multiplicacao(
+    x: list[list[float]], y: list[list[float]]
+) -> list[list[float]] | None:
     """Multiplica duas matrizes"""
     # TODO: implementar
     # a multiplicação de duas matrizes [[1, 2, 4], [2, 3, 4]] por [[2, 3, 4], [1, 2, 4]] é [[10, 17, 28], [12, 20, 32]]
@@ -31,7 +35,7 @@ def norma(x: list[list[float]]) -> float:
     # caso a matriz esteja vazia deve-se retornar 0
 
 
-def é_simétrica(x: list[list[float]]) -> bool:
+def eh_simetrica(x: list[list[float]]) -> bool:
     """Verifica se uma matriz é simétrica"""
     # TODO: implementar
     # uma matriz é simétrica se ela é quadrada e se ela é igual a sua transposta

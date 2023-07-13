@@ -1,6 +1,4 @@
 """Módulo com as funções de manipulação de vetores."""
-from tipos import Escalar, Vetor
-from math import sqrt
 
 def norma(x: Vetor) -> Escalar | None:
     """Calcula a norma de um vetor"""
@@ -16,7 +14,6 @@ def norma(x: Vetor) -> Escalar | None:
         soma += i**2
     return sqrt(soma)
     
-
 def soma(x: Vetor, y: Vetor) -> Vetor | None:
     """Soma dois vetores"""
     # TODO: implementar
@@ -29,7 +26,6 @@ def soma(x: Vetor, y: Vetor) -> Vetor | None:
     for x, y in zip(x, y):
         resultado.append(x + y)
     return resultado
-
     
 def multiplicacao_por_escalar(vetor: Vetor, escalar: Escalar) -> Vetor:
     """Multiplica um vetor por um escalar"""
@@ -39,8 +35,6 @@ def multiplicacao_por_escalar(vetor: Vetor, escalar: Escalar) -> Vetor:
     for i in range(len(vetor)):
         multiplica.append(vetor[i]*escalar)
     return multiplica
-
-
 
 def produto_interno(x: Vetor, y: Vetor) -> Escalar | None:
     """Calcula o produto interno de dois vetores"""
@@ -60,8 +54,6 @@ def produto_interno(x: Vetor, y: Vetor) -> Escalar | None:
         soma += i * j
     return soma
 
-
-
 def produto_vetorial(x: Vetor, y: Vetor) -> Vetor | None:
     """Calcula o produto vetorial de dois vetores"""
     # TODO: implementar
@@ -76,9 +68,6 @@ def produto_vetorial(x: Vetor, y: Vetor) -> Vetor | None:
         x[0] * y[1] - x[1] * y[0]
     ]
     return produto     
-
-
-
 
 def produto_diadico(x: Vetor, y: Vetor) -> list[Vetor] | None:
     """Calcula o produto diádico de dois vetores"""

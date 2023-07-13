@@ -1,4 +1,3 @@
-from math import sqrt
 """Módulo com as funções de manipulação de matrizes."""
 
 
@@ -21,9 +20,6 @@ def soma(x: list[list[float]], y: list[list[float]]) -> list[list[float]] | None
         resultado.append(linha)
     return resultado
 
-
-    
-
 def multiplicacao_por_escalar(
     matriz: list[list[float]], escalar: float
 ) -> list[list[float]]:
@@ -37,7 +33,6 @@ def multiplicacao_por_escalar(
             linha.append(matriz[i][j] * escalar) 
         resultado.append(linha)
     return resultado
-
     
 def multiplicacao(
     x: list[list[float]], y: list[list[float]]
@@ -47,7 +42,6 @@ def multiplicacao(
     # a multiplicação de duas matrizes [[1, 2, 4], [2, 3, 4]] por [[2, 3, 4], [1, 2, 4]] é [[10, 17, 28], [12, 20, 32]]
     # a multiplicação só pode ser realizada se a quantidade de colunas da primeira matriz é igual a quantidade de linhas da segunda matriz.
     # caso contrário, deve retornar None
-
 
 def norma(x: list[list[float]]) -> float:
     """Calcula a norma de uma matriz"""
@@ -62,9 +56,8 @@ def norma(x: list[list[float]]) -> float:
             quadrado += x[i][j]**2
             resultado = quadrado
         return resultado**0.5
+
         
-
-
 def eh_simetrica(x: list[list[float]]) -> bool:
     """Verifica se uma matriz é simétrica"""
     # TODO: implementar
